@@ -12,14 +12,13 @@ class Player {
     this.x = 0;
     this.width = 45;
     this.height = 45;
-    this.speedX = -1;
+    this.speedX = -3;
     this.speedY = 1;
     this.gravity = 0.5;
     this.gravitySpeed = 1;
   }
 
   update() {
-    console.log(this.gravity);
     paintBackground(this.x);
     paintBackground(this.x + canvas.width);
     paintFlappy(150, this.y, this.width, this.height);
@@ -32,6 +31,10 @@ class Player {
     this.gravitySpeed += this.gravity;
     this.y += this.speedY * this.gravitySpeed;
   }
+}
+
+class Obstacle {
+  constructor() {}
 }
 
 let faby;
